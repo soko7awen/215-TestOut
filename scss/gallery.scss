@@ -1,0 +1,52 @@
+@import url(style.css);
+
+.navbar {
+    ul {
+        li {
+            &:nth-of-type(1) {
+                margin-top: 0;
+                a {
+                    color: inherit;
+                }
+            }
+            &:nth-of-type(3) {
+                margin-top: 8px;
+                a {
+                    color: var(--primary-orange);
+                }
+            }
+        }
+    }
+}
+
+.gallery {
+    display: flex;
+    margin-bottom: 450px;
+    align-items: center;
+    gap: 29px;
+
+    .portrait {
+        width: 361px;
+        height: 591px;
+    }
+    
+    .stacked {
+        display: flex;
+        align-self: stretch;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
+        gap: 10px;
+
+        .landscape-1 {
+            width: 386px;
+            height: 260px;
+        }
+
+
+        .landscape-2 {
+            width: 373px;
+            height: 287px;
+        }
+    }
+}

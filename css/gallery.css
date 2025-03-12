@@ -1,0 +1,42 @@
+@import url(style.css);
+.navbar ul li:nth-of-type(1) {
+  margin-top: 0;
+}
+.navbar ul li:nth-of-type(1) a {
+  color: inherit;
+}
+.navbar ul li:nth-of-type(3) {
+  margin-top: 8px;
+}
+.navbar ul li:nth-of-type(3) a {
+  color: var(--primary-orange);
+}
+
+.gallery {
+  display: flex;
+  margin-bottom: 450px;
+  align-items: center;
+  gap: 29px;
+}
+.gallery .portrait {
+  width: 361px;
+  height: 591px;
+}
+.gallery .stacked {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  gap: 10px;
+}
+.gallery .stacked .landscape-1 {
+  width: 386px;
+  height: 260px;
+}
+.gallery .stacked .landscape-2 {
+  width: 373px;
+  height: 287px;
+}
+
+/*# sourceMappingURL=gallery.css.map */
