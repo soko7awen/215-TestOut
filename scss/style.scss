@@ -7,8 +7,11 @@
     --secondary-blue: #8cc9d3;
 }
 
+.oranged {
+    background-color: var(--primary-orange-alpha);
+}
+
 body {
-    display: none;
     font-family: sans-serif;
     font-size: 16px;
 }
