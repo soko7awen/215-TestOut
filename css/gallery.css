@@ -13,46 +13,39 @@
 }
 
 .gallery {
-  aspect-ratio: 1157/591;
+  display: grid;
+  grid-template-columns: 361fr 386fr 354fr;
+  aspect-ratio: 1200/591;
+  width: 100%;
   height: auto;
-  margin-bottom: 450px;
+  margin-bottom: 37.5%;
+  column-gap: 1.75%;
 }
-
-.flex-grid {
-  display: flex;
+.gallery img {
+  width: 100%;
   height: 100%;
-  align-items: center;
 }
-.flex-grid .col {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: end;
-  justify-content: space-between;
-  padding-right: 5%;
+.gallery .col {
+  display: grid;
 }
-.flex-grid .col:last-of-type {
+.gallery .col:last-of-type {
   padding-right: 0;
 }
-.flex-grid .portrait {
+.gallery .portrait, .gallery .landscape {
+  position: relative;
+}
+.gallery .landscape {
+  max-height: 100%;
   width: auto;
-  height: 100%;
 }
-.flex-grid .portrait-1 {
-  aspect-ratio: 361/591;
-}
-.flex-grid .portrait-2 {
-  aspect-ratio: 354/591;
-}
-.flex-grid .landscape {
-  flex: 1;
-  flex-grow: 0;
-}
-.flex-grid .landscape-1 {
+.gallery .landscape:nth-of-type(1) {
   aspect-ratio: 386/260;
 }
-.flex-grid .landscape-2 {
+.gallery .landscape:nth-of-type(2) {
   aspect-ratio: 373/287;
+  width: 96.635%;
+  align-self: end;
+  justify-self: end;
 }
 
 /*# sourceMappingURL=gallery.css.map */
