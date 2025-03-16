@@ -5,6 +5,8 @@
   --primary-blue: #00879E;
   --primary-blue-alpha: rgba(0,135,158,0.4);
   --secondary-blue: #8cc9d3;
+  --navbar-width: 66.667%;
+  --content-width: 62.5%;
 }
 
 .overlay {
@@ -27,7 +29,11 @@ body {
   font-family: sans-serif;
   font-size: medium;
   letter-spacing: -0.035em;
-  line-height: 1.187;
+}
+
+.content {
+  width: var(--content-width);
+  margin: 0 auto;
 }
 
 h1 {
@@ -35,8 +41,12 @@ h1 {
   font-weight: normal;
 }
 
+p {
+  line-height: 1.187;
+}
+
 .navbar {
-  width: 67%;
+  width: var(--navbar-width);
   height: 70px;
   margin: 69px auto 0 auto;
   border-bottom: 3px solid var(--primary-orange);
@@ -67,33 +77,26 @@ h1 {
   color: var(--primary-orange);
 }
 
-.hero {
-  width: 62.5%;
-  margin: 136px auto 0 auto;
-}
-.hero h1.underlined-header {
+h1.underlined-header {
   width: 20.834%;
   min-width: 150px;
   margin-bottom: 60px;
   border-bottom: 3px solid black;
+}
+
+.image {
+  position: relative;
+  align-self: flex-start;
+}
+
+.hero {
+  margin: 136px auto 0 auto;
 }
 .hero .hero-image {
   position: relative;
   aspect-ratio: 1200/484;
   width: 100%;
   height: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.hero .hero-image:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--primary-orange-alpha); /* Change the color and opacity as needed */
 }
 
 h1.center-header {
@@ -101,28 +104,27 @@ h1.center-header {
 }
 
 .center-text {
-  margin: 161px auto 180px auto;
   text-align: center;
 }
 
 .discover {
   display: flex;
-  width: 100%;
+  padding-right: 20%;
   margin: 136px auto 504px auto;
-  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 8.125%;
 }
 .discover .image {
-  position: relative;
-  align-self: flex-start;
+  flex-shrink: 0;
   margin-top: 18px;
-  margin-right: 125px;
+  align-self: flex-start;
 }
 .discover .image img {
   width: 100%;
   height: 100%;
 }
 .discover .text {
-  width: 710px;
+  width: 46.224%;
 }
 .discover .text h1 {
   text-align: center;
@@ -131,6 +133,8 @@ h1.center-header {
 
 footer {
   aspect-ratio: 1920/556;
+  max-height: 556px;
+  width: 100%;
   background-color: var(--primary-blue);
   color: white;
 }

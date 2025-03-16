@@ -14,12 +14,11 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: 361fr 386fr 354fr;
-  aspect-ratio: 1200/591;
-  width: 100%;
+  grid-template-columns: 364fr 29fr 386fr 24fr 354fr;
+  aspect-ratio: 1157/591;
+  width: 96.417%;
   height: auto;
   margin-bottom: 37.5%;
-  column-gap: 1.75%;
 }
 .gallery img {
   width: 100%;
@@ -33,6 +32,9 @@
 }
 .gallery .portrait, .gallery .landscape {
   position: relative;
+}
+.gallery .portrait {
+  height: 100%;
 }
 .gallery .landscape {
   max-height: 100%;

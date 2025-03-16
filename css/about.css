@@ -12,4 +12,8 @@
   color: var(--primary-orange);
 }
 
+.center-text {
+  margin: 161px auto 180px auto;
+}
+
 /*# sourceMappingURL=about.css.map */

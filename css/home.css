@@ -2,7 +2,6 @@
 .hero {
   display: flex;
   aspect-ratio: 1920/668;
-  width: 100%;
   margin-top: 94px;
   background-image: url("../img/abstracthero.jpg");
   background-size: 100% auto;
@@ -15,6 +14,10 @@
 .hero span {
   font-size: 32px;
   color: white;
+}
+
+.content {
+  width: 98%;
 }
 
 h1, p {

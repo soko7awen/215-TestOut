@@ -1,0 +1,58 @@
+@import url(style.css);
+
+.content {
+    width: var(--navbar-width);
+}
+
+h1.underlined-header {
+    margin-top: 100px;
+}
+
+.contact {
+    display: flex;
+    width: 95.625%;
+    margin: 190px 0 405px 0;
+    justify-content: space-between;
+    
+    .image {
+        width: 40.85%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 58px;
+
+        input, textarea {
+            width: 500px;
+            border-radius: 0;
+            border: 2px solid var(--primary-orange-alpha);
+
+            &:hover {
+                border-color: rgba(252,80,0,.6);
+            }
+
+            &:focus-visible {
+                outline: none;
+                border-color: var(--primary-orange);
+            }
+        }
+
+        .button {
+            width: 150px;
+            height: 40px;
+            border: none;
+            background-color: var(--primary-blue);
+            color: white;
+
+            &:hover {
+                background-color: #007182;
+            }
+
+            &:active {
+                background-color: #009fb8;
+            }
+        }
+    }
+}
