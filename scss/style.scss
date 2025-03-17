@@ -88,18 +88,41 @@ p {
         }
     }
 
+    .menu-button {
+        display: none;
+    }
+
     @media screen and (max-width: 1200px) {
         height: 58px;
     }
 
     @media screen and (max-width: 640px) {
-        display: none;
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+        justify-content: flex-end;
+        
+        ul {
+            display: none;
+        }
+
+        .menu-button {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(black,0.5);
+            font-size: 32px;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
     }
 }
 
 h1.underlined-header {
     width: 20.834%;
-    min-width: 150px;
+    min-width: 166px;
     margin-bottom: 60px;
     border-bottom: 3px solid black;
 }
@@ -136,10 +159,9 @@ h1.center-header {
 .discover {
     display: flex;
     padding-left: 2%;
-    padding-right: 15%;
-    margin: 7vw auto 504px auto;
-    flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
+    margin: 7vw auto 25vw auto;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 8.125%;
 
     .image {
@@ -152,7 +174,7 @@ h1.center-header {
         }
     }
     .text {
-        width: 46.224%;
+        width: 38.106%;
         min-width: 600px;
         h1 {
             text-align: center;
@@ -182,20 +204,25 @@ footer {
         margin: 43px auto 0 auto;
         input {
             width: 76.93%;
+            max-width: 500px;
             height: 30px;
             padding: 0;
             border: none;
             background-color: var(--secondary-blue);
         }
-        label {
-            display: inline-block;
+        .button {
             width: 23.08%;
             min-width: 90px;
             height: 30px;
-            color: black;
             background-color: white;
+            color: black;
             text-align: center;
             line-height: 30px;
+            cursor: pointer;
+
+            &:active {
+                background-color: lightgray;
+            }
         }
     }
 
@@ -208,6 +235,19 @@ footer {
 
         a {
             color: white;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .subscribe {
+            flex-wrap: wrap;
+            
+            input {
+                width: 100%;
+            }
+            .button {
+                width: 100%;
+            }
         }
     }
 }
