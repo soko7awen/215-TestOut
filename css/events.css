@@ -17,6 +17,12 @@ h1.center-header {
 .events-wrapper .event {
   display: flex;
   width: 397px;
+  color: black;
+  text-decoration: none;
+}
+.events-wrapper .event:hover {
+  color: blue;
+  filter: brightness(0.5);
 }
 .events-wrapper .event .date {
   display: flex;

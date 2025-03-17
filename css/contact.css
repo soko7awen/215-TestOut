@@ -26,6 +26,7 @@ h1.underlined-header {
   width: 500px;
   border-radius: 0;
   border: 2px solid var(--primary-orange-alpha);
+  background-color: rgba(201, 201, 201, 0.42);
 }
 .contact form input:hover, .contact form textarea:hover {
   border-color: rgba(252, 80, 0, 0.6);

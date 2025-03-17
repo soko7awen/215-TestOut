@@ -1,12 +1,22 @@
 @import url("reset.css");
 :root {
   --primary-orange: #FC5000;
-  --primary-orange-alpha: rgba(233,131,13,0.4);
+  --primary-orange-alpha: rgba(233,131,13,0.42);
   --primary-blue: #00879E;
   --primary-blue-alpha: rgba(0,135,158,0.4);
   --secondary-blue: #8cc9d3;
   --navbar-width: 66.667%;
   --content-width: 62.5%;
+}
+@media screen and (max-width: 1200px) {
+  :root {
+    --content-width: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
+  :root {
+    --content-width: 98%;
+  }
 }
 
 .overlay {
@@ -48,7 +58,7 @@ p {
 .navbar {
   width: var(--navbar-width);
   height: 70px;
-  margin: 69px auto 0 auto;
+  margin: 3.646% auto 0 auto;
   border-bottom: 3px solid var(--primary-orange);
 }
 .navbar ul {
@@ -76,6 +86,16 @@ p {
 .navbar ul li:nth-of-type(1) a {
   color: var(--primary-orange);
 }
+@media screen and (max-width: 1200px) {
+  .navbar {
+    height: 58px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .navbar {
+    display: none;
+  }
+}
 
 h1.underlined-header {
   width: 20.834%;
@@ -86,13 +106,17 @@ h1.underlined-header {
 
 .image {
   position: relative;
+}
+.image img {
+  height: 100%;
+  object-fit: cover;
   align-self: flex-start;
 }
 
 .hero {
-  margin: 136px auto 0 auto;
+  margin: 7vw auto 0 auto;
 }
-.hero .hero-image {
+.hero .image {
   position: relative;
   aspect-ratio: 1200/484;
   width: 100%;
@@ -109,15 +133,17 @@ h1.center-header {
 
 .discover {
   display: flex;
-  padding-right: 20%;
-  margin: 136px auto 504px auto;
+  padding-left: 2%;
+  padding-right: 15%;
+  margin: 7vw auto 504px auto;
+  flex-wrap: wrap-reverse;
   flex-direction: row-reverse;
   gap: 8.125%;
 }
 .discover .image {
   flex-shrink: 0;
   margin-top: 18px;
-  align-self: flex-start;
+  align-self: start;
 }
 .discover .image img {
   width: 100%;
@@ -125,6 +151,7 @@ h1.center-header {
 }
 .discover .text {
   width: 46.224%;
+  min-width: 600px;
 }
 .discover .text h1 {
   text-align: center;
@@ -160,6 +187,7 @@ footer .subscribe input {
 footer .subscribe label {
   display: inline-block;
   width: 23.08%;
+  min-width: 90px;
   height: 30px;
   color: black;
   background-color: white;

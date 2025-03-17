@@ -18,6 +18,13 @@ h1.center-header {
     .event {
         display: flex;
         width: 397px;
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            color: blue;
+            filter: brightness(0.5);
+        }
 
         .date {
             display:flex;
