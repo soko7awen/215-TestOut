@@ -22,6 +22,7 @@
 
 .content {
   width: var(--navbar-width);
+  padding: 0 2%;
 }
 
 h1.underlined-header {
@@ -79,6 +80,8 @@ h1.underlined-header {
 }
 @media screen and (max-width: 1200px) {
   .contact {
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
   }
   .contact .image {
