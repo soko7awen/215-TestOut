@@ -132,12 +132,17 @@ p {
             display: block;
             padding-left: 2%;
 
-            li a {
-                float: none;
-                display: block;
-                height: var(--navbar-height);
-                text-align: left;
-                line-height: var(--navbar-height);
+            li {
+                a {
+                    float: none;
+                    display: block;
+                    height: var(--navbar-height);
+                    text-align: left;
+                    line-height: var(--navbar-height);
+                }
+                &:nth-of-type(1) {
+                    margin-left: 4px;
+                }
             }
         }
     }

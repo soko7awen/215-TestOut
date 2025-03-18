@@ -1,4 +1,25 @@
 @import url(style.css);
+.navbar ul li:nth-of-type(1) {
+  margin-top: 0;
+}
+.navbar ul li:nth-of-type(1) a {
+  color: inherit;
+}
+.navbar ul li:nth-of-type(4) {
+  margin-top: 8px;
+}
+.navbar ul li:nth-of-type(4) a {
+  color: var(--primary-orange);
+}
+@media screen and (max-width: 640px) {
+  .navbar ul li:nth-of-type(1) {
+    margin-left: 0;
+  }
+  .navbar ul li:nth-of-type(4) {
+    margin-left: 4px;
+  }
+}
+
 h1.center-header {
   margin: 6.875vw auto 3.75vw;
 }
