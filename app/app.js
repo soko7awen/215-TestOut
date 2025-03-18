@@ -9,3 +9,12 @@ $(document).ready(function() {
         $("body").fadeIn(200);
     });
 });
+
+function showMenuButton(button) {
+    var parentNode = button.parentNode;
+    if (parentNode.className === "navbar") {
+        parentNode.className += " drop";
+    } else {
+        parentNode.className = "navbar";
+    }
+  } 

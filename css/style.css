@@ -5,6 +5,7 @@
   --primary-blue: #00879E;
   --primary-blue-alpha: rgba(0,135,158,0.4);
   --secondary-blue: #8cc9d3;
+  --navbar-height: 70px;
   --navbar-width: 66.667%;
   --content-width: 62.5%;
 }
@@ -57,7 +58,7 @@ p {
 
 .navbar {
   width: var(--navbar-width);
-  height: 70px;
+  height: var(--navbar-height);
   margin: 3.646% auto 0 auto;
   border-bottom: 3px solid var(--primary-orange);
 }
@@ -89,34 +90,49 @@ p {
 .navbar .menu-button {
   display: none;
 }
+
 @media screen and (max-width: 1200px) {
-  .navbar {
-    height: 58px;
+  :root {
+    --navbar-height: 58px;
   }
 }
 @media screen and (max-width: 640px) {
-  .navbar {
+  nav.navbar {
     display: flex;
     width: 100%;
     margin: 0 auto;
     border: none;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
-  .navbar ul {
+  nav.navbar ul li a {
     display: none;
   }
-  .navbar .menu-button {
+  nav.navbar .menu-button {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: var(--navbar-height);
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 32px;
     color: white;
     text-align: center;
-    line-height: 50px;
+    line-height: var(--navbar-height);
+  }
+  nav.navbar.drop {
+    position: relative;
+    height: fit-content;
+  }
+  nav.navbar.drop ul {
+    display: block;
+    padding-left: 2%;
+  }
+  nav.navbar.drop ul li a {
+    float: none;
+    display: block;
+    height: var(--navbar-height);
+    text-align: left;
+    line-height: var(--navbar-height);
   }
 }
-
 h1.underlined-header {
   width: 20.834%;
   min-width: 166px;
@@ -153,7 +169,7 @@ h1.center-header {
 
 .discover {
   display: flex;
-  padding-left: 2%;
+  padding: 0 2%;
   margin: 7vw auto 25vw auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -170,7 +186,8 @@ h1.center-header {
 }
 .discover .text {
   width: 38.106%;
-  min-width: 600px;
+  max-width: 600px;
+  flex-basis: 100%;
 }
 .discover .text h1 {
   text-align: center;
@@ -193,7 +210,9 @@ footer .info {
 }
 footer .subscribe {
   display: flex;
-  width: 33.855%;
+  width: 650px;
+  min-width: 33.855%;
+  max-width: 80%;
   margin: 43px auto 0 auto;
 }
 footer .subscribe input {
