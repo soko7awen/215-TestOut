@@ -184,8 +184,8 @@ h1.center-header {
   align-self: start;
 }
 .discover .image img {
-  width: 100%;
-  height: 100%;
+  max-width: 96vw;
+  height: auto;
 }
 .discover .text {
   width: 38.106%;
